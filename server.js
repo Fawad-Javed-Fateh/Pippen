@@ -38,7 +38,7 @@ app.post('/playvideo',(req,res)=>{
     console.log(checked)
     selectedFile=path.join(__dirname+'/uploads/'+checked[0])
     console.log(selectedFile)
-    res.redirect('http://localhost:3000/video')
+    res.redirect('http://192.168.0.102:3000/video') /* change this to your own computers up address as well as the port you have specified later on in the code  */
     
 })
 
