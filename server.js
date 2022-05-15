@@ -8,6 +8,7 @@ const bodyParser=require('body-parser')
 app.set('view engine','ejs')
 
 app.use(bodyParser.urlencoded({extended:true}))
+app.use(express.static(__dirname + '/public'));
 app.use(upload())
 var selectedFile=""
 
@@ -38,7 +39,7 @@ app.post('/playvideo',(req,res)=>{
     console.log(checked)
     selectedFile=path.join(__dirname+'/uploads/'+checked[0])
     console.log(selectedFile)
-    res.redirect('http://192.168.0.102:3000/video') /* change this to your own computers up address as well as the port you have specified later on in the code  */
+    res.redirect('http://192.168.0.103:3000/video') /* change this to your own computers up address as well as the port you have specified later on in the code  */
     
 })
 
